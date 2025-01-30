@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zoo Safari Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Book Your Safari Adventure Today!</h1>
+        <p>Explore the wild with us, meet majestic animals and have unforgettable moments.</p>
+        <a href="#booking" class="btn">Reserve Your Safari</a>
+    </div>
+</section>
+
+<!-- Safari Booking Section -->
+<section class="booking" id="booking">
+    <h2>Book Your Safari</h2>
+    <form action="#" method="POST">
+        <label for="date">Choose your visit date:</label>
+        <input type="date" id="date" name="visit_date" required>
+        
+        <label for="time">Select Safari Time:</label>
+        <select id="time" name="safari_time" required>
+            <option value="morning">Morning Safari</option>
+            <option value="afternoon">Afternoon Safari</option>
+        </select>
+        
+        <div class="pricing">
+            <p>Adult: Rs.2500 | Child: Rs.1000 | Group of 4: Rs.5000</p>
+        </div>
+        
+        <button type="submit" class="btn">Proceed with Booking</button>
+    </form>
+</section>
+
+<!-- Animals Info Section -->
+<section class="animals">
+    <h2>Meet Our Majestic Animals!</h2>
+    <div class="animals-gallery">
+        <div class="animal-card">
+            <img src="lion.jpg" alt="Lion">
+            <h3>Lions</h3>
+            <p>The kings of the jungle!</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="animal-card">
+            <img src="elephant.jpg" alt="Elephant">
+            <h3>Elephants</h3>
+            <p>Meet the gentle giants!</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="animal-card">
+            <img src="giraffe.jpg" alt="Giraffe">
+            <h3>Giraffes</h3>
+            <p>Get a tall view of the world!</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="animal-card">
+            <img src="panda.jpg" alt="Lion">
+            <h3>Panda</h3>
+            <p>Guardian of Bamboo.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="animal-card">
+            <img src="birds.jpg" alt="Lion">
+            <h3>Birds</h3>
+            <p>Songs of the Sky.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section class="about">
+    <h2>About Us</h2>
+    <p>We are dedicated to providing a safe, fun, and educational safari experience, while also focusing on wildlife conservation.</p>
+    <p>Join us in supporting eco-friendly practices and learn more about the animals that share our planet.</p>
+   
+</section>
+
+<!-- Contact Us Section -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Your Query:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+    
+    <div class="contact-info">
+        <p>Email: info@zoo.com</p>
+        <p>Phone: +123 456 7890</p>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2025 Zoo Safari. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+</footer>
+
+</body>
+</html>

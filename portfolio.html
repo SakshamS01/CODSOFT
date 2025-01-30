@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 8px;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #1e1e1e;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00adb5;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f1f1f1;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #00adb5;
+        }
+
+        section {
+            padding: 100px 40px;
+        }
+
+        #hero {
+            text-align: center;
+            padding-top: 120px;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            padding-bottom: 100px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #00adb5;
+            animation: slideUp 1s ease-in-out;
+            margin-top: 60px;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .section-content {
+            text-align: center;
+            background: #1e1e1e;
+            padding: 100px 60px;
+            margin: 20px 0;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section-content:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .skills-grid,
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .skill-box,
+        .project-box {
+            background: #393e46;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .skill-box:hover,
+        .project-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        #projects .btn {
+            display: block;
+            margin: 0 20px 20px;
+            padding: 10px;
+            background: #00adb5;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        #projects .btn:hover {
+            background: #106f74;
+        }
+
+        #resume {
+            text-align: center;
+            background: #1e1e1e;
+            border-radius: 10px;
+        }
+
+        #resume h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f9f9f9;
+        }
+
+        #resume .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #00adb5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+
+        #resume .btn:hover {
+            background: #106f74;
+        }
+
+        .section-content h3 {
+            color: #00adb5;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background: #00adb5;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #077277;
+        }
+
+        footer {
+            background: #121212;
+            text-align: center;
+            padding: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Saksham Shukla</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Creative Designer | Frontend Developer | Storyteller</p>
+    </section>
+
+    <section id="about" class="section-content">
+        <img src="me.jpg" alt="Profile Picture" class="profile-img">
+        <h2>About Me</h2>
+        <p>Hey, I'm Saksham Shukla! 🚀
+            A web developer & UI/UX enthusiast blending logic with creativity. Pursuing CSE at a government college, I’m
+            passionate about building sleek, user-friendly web experiences that look great and work even better.
+
+            Always learning, always creating—let’s build something amazing! 💡✨</p>
+    </section>
+
+    <!-- <section id="education" class="section-content">
+        <h2>Education</h2>
+        <p>Currently pursuing Bachelor’s in Computer Science | Government College of Engineering Nagpur</p>
+    </section> -->
+    <section id="education" class="section-content">
+        <h2>Education</h2>
+        <div class="skill-box">
+            <h3> B.Tech in Computer Science Engineering</h3>
+            <p><span>Government College of Engineering, Nagpur</span> |  August 2023 - Present</p>
+        </div>
+    </section>
+
+    <section id="experience" class="section-content">
+        <h2>Experience</h2>
+        <div class="skills-grid">
+            <div class="skill-box">
+                <h3>Technical Director</h3>
+                <p><span>Rotaract Club of GCOEN</span> | Duration: June 2024 - Present</p>
+            </div>
+            <div class="skill-box">
+                <h3>Design Associate</h3>
+                <p><span>Google Developer group on campus(GCOEN)</span> | Duration: June 2024 - Present</p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Technical Head</h3>
+                <p><span>Computer Science Student Association</span> | Duration: Sep 2024 - Present</p>
+            </div>
+            <div class="skill-box">
+                <h3>Executive Committee Member</h3>
+                <p><span>Institution's Innovation Council, GCOEN</span> | Duration: Sep 2024 - Present</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-content">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">UI/UX Design</div>
+            <div class="skill-box">Video Editing</div>
+            <div class="skill-box">Public speaking</div>
+            <div class="skill-box">Presentation</div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="section-content">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-box">
+                <img src="portfolio.jpg" alt="Project 1">
+                <p>Project 1 - A web design portfolio.</p>
+                <a href="portfolio.html" class="btn">View Project</a>
+
+            </div>
+            <div class="project-box">
+                <img src="landingpage.jpg" alt="Project 2">
+                <p>Project 2 - Landing page</p>
+                <a href="zoolandingpage.html" class="btn">View Project</a>
+            </div>
+            <div class="project-box">
+                <img src="calculator.jpg" alt="Project 3">
+                <p>Project 3 - Calculator</p>
+                <a href="calculator.html" class="btn">View Project</a>
+
+            </div>
+            <div class="project-box">
+                <img src="snake.jpg" alt="Project 4">
+                <p>Project 4 - Snake game</p>
+                <a href="Snake.html" class="btn">View Project</a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>Click below to download my resume.</p>
+        <a href="SakshamResume.pdf" download class="btn">Download Resume</a>
+    </section>
+
+
+    <section id="contact" class="section-content">
+        <h2>Contact Me</h2>
+        <p>Name: Saksham Shukla</p>
+        <p>Email: my.email@gmail.com</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Query" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Saksham Shukla. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
